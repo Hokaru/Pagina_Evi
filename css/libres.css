@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	font-family: 'Indie Flower', cursive;
+}
+
+header{
+	background: #333;
+	color: #fff;
+	width: 100%;
+	height: 50px;
+
+	position: fixed;
+	top: 0;
+	left:0;
+	z-index: 100;
+}
+
+.contenedor{
+	width: 98%;
+	margin:auto;
+
+}
+h1{
+	float: left;
+}
+header .contenedor{
+	display: table;
+}
+
+section{
+	width: 100%;
+	margin-bottom: 25px;
+}
+
+#menu-bar{
+	display: none;
+
+}
+
+header label{
+	float: right;
+	font-size: 28px;
+	margin: 6px 0;
+	cursor: pointer;
+}
+
+.menu{
+	position: absolute;
+	top: 50px;
+	left: 0;
+	width: 100%;
+	height: 100vh;/*siempre ocupara el 100% del alto de la ventana*/
+	background: rgba(51,51,51,0.9);
+	transition: all 0.5s;
+	transform: translateX(-100%);
+}
+
+.menu a {
+	display: block;
+	color: #fff;
+	height: 50px;
+	text-decoration: none;
+	padding: 15px;
+	border-bottom: 1px solid rgba(255,255,255,0.5);
+}
+
+.menu a:hover{
+	background: rgba(255,255,255,0.3);
+}
+
+#menu-bar:checked ~ .menu{
+	transform: translateX(0%);
+}
+/*------------------------------------------------*/
+@media(min-width:1024px){
+		.menu{
+			position: static;
+			width: auto;
+			height: auto;
+			transform: translateX(0%);
+			float: right;
+			display: flex;
+		}
+		.menu a{
+			border: none;
+		}
+		header label{
+			display: none;
+		}
+}
+/*--------------------------------------------------------------------
+BANNER
+----------------------------------------------------------------------*/
+#banner{
+	margin-top: 50px;
+	position: relative;
+}
+
+#banner img {
+	width: 100%;
+	height: 100%;
+}
+
+#banner .contenedor{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	color: #fff;
+}
+
+#banner h2{
+	font-size: 28px;
+}
+
+#banner a{
+	display: block;
+	width: 100px;
+	color: #fff;
+	text-decoration: none;
+	padding: 10px;
+	margin-top: 10px;
+	border:3px solid #fff;
+}
+#banner a:hover{
+	color:cyan;
+}
+/*-----------------------------------------------*/
+@media (min-width: 480px){
+	#banner h2{
+		font-size: 40px;
+	}
+	#banner a{
+		margin-top: 25px;
+	}
+}
+
+@media(min-width: 768px) {
+	#banner {
+		height: 300px;
+		overflow: hidden;
+
+	}
+	#banner img{
+		height: auto;
+		margin-top: -100px;
+	}	
+}
+@media (min-width: 1024px){
+	#banner img{
+		margin-top: -200px;
+		
+	}
+}
+
+
+
+
+/*---------------------------------¨---------------------------------
+blog
+--------------------------------------------------------------------*/
+
+#Bienvenidos{
+	text-align: center;
+
+}
+
+#Bienvenidos h5{
+	text-align: center;
+	font-size: 15px;
+	margin:20px; 
+}
+
+#blog h5{
+	text-align: center;
+	font-size: 15px;
+	margin:10px; 
+}
+#blog h3,h4{
+	text-align:center;
+	font-size: 21px;
+
+}
+
+#blog .contenedor{
+	justify-content: center;
+}
+ 
+#blog article{
+	margin: 23px;
+}
+
+#blog img{
+	width: 100%;
+	
+}
+
+#vid iframe{
+	width: 430px;
+	height: 315px;
+	text-align: center;
+}
+
+@media(min-width:678px ){
+	#blog article{
+		margin:20px; 
+	}
+	#vid iframe{
+	width: 560px;
+	height: 315px;
+	text-align: center;
+}
+}
+
+
+
+	#Bienvenido h5{
+		margin: 40%;
+}
+
+/*----------------------------------------------------------
+aside
+--------------------------------------------------*/
+
+/*------------------------------------------------
+footer
+-----------------------------------------------*/
+footer .contenedor{
+	display: flex;
+	flex-wrap:wrap;
+	justify-content: center; 
+	padding-bottom: 25px;
+	background:#333; 
+	width: 100%;
+	
+}
+.copy{
+	font-size: 20px;
+	color: #fff;
+}
+
+.sociales{
+	width: 100%;
+	text-align: center;
+	font-size:28px;  
+}
+#impor{
+	text-align: center;
+	font-size: 13px;
+	color: #fff;
+	
+
+}
+.sociales a{
+	color: #fff;
+	text-decoration:none; 
+}
+
+.sociales a:hover{
+	color:purple;
+}
+/*-------------------------------------------*/
+@media (min-width: 1024px){
+.sociales{
+	width: auto;
+}
+footer .contenedor{
+	justify-content: space-between;
+}
+@media (min-width: 1024px){
+	.contenedor{
+		width: 1000px;
+	}
+}

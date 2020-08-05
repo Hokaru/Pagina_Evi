@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulario</title>
+  <link rel="stylesheet" href="inicio.css">
+</head>
+<body>
+  <h1>Formulario de registro</h1>
+  <form action="form.php" method="post" class="form-register">
+    <h2 class="form__titulo">CREA TU CUENTA</h2>
+    <div class="contenedor-inputs">
+      
+      <input type="text" name="nombre" placeholder="Nombre" class="input-30">
+      <input type="text" name="apellidop" placeholder="Apellido paterno" class="input-30">
+      <input type="text" name="apellidom" placeholder="Apellido materno" class="input-30">
+      <input type="email" name="correo" placeholder="Correo electronico"class="input-100">
+      <input type="text" name="usuario" placeholder="Usuario" class="input-30">
+      <input type="password" name="clave" placeholder="Contraseña" class="input-30">
+      <input type="text" name="telefono" placeholder="Teléfono"class="input-100">
+      <input type="submit" value="Registrar" class="btn-enviar">
+      <p class="form__link">¿Ya tienes una cuenta?<a href="#">Ingresa aqui</a></p><!--aqui ya puedo darle validar para que me encvie a la pagina de inicio de sesion-->
+
+    </div>
+  </form>
+  
+</body>
+</html>
